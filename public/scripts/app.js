@@ -149,7 +149,7 @@ var initialMatch = {
   }
 
   app.getSchedule = function(teamcode, teamnaam) {
-    var url = 'https://data.sportlink.com/programma?aantaldagen=30&teamcode=' + teamcode + apiKey;
+    var url = 'https://data.sportlink.com/uitslagen?weekoffset=-4&aantaldagen=30&teamcode=' + teamcode + apiKey;
 
     if('caches' in window) {
       caches.match(url).then(function(response) {
